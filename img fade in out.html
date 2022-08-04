@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>img fade</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+<script>
+$(document).ready(function(){  
+    $("#b1").click(function(){  
+        $("#div1").fadeOut();  
+        $("#div2").fadeOut("slow");  
+        $("#div3").fadeOut(2000);  
+    $("#b2").click(function(){  
+        $("#div1").fadeIn();  
+        $("#div2").fadeIn("slow");  
+        $("#div3").fadeIn(2000);  
+    });  
+    });  
+    $("#b2").attr("disabled",true);
+				$("#b1").click(function(){
+					if(confirm("Are you sure..??"))
+					{
+						$("#MyDiv").hide(2000);
+						$(this).attr("disabled",true);
+						$("#b2").attr("disabled",false);
+					}
+				});
+				$("#b2").click(function(){
+					if(confirm("Are you sure..??"))
+					{
+						$("#MyDiv").show(2000);
+						$(this).attr("disabled",true);
+						$("#b1").attr("disabled",false);
+					}
+				});
+});  
+</script>  
+</head>  
+<body style="background-image: url(https://i.pinimg.com/550x/70/0f/96/700f961a62c5b959d7912f6f45d029c1.jpg);">   
+	<center>
+		<button id="b1" style="background-color: pink;">FADE OUT IMG</button><br><br>  
+        <button id="b2" style="background-color: lightgreen;">FADE IN IMG</button><br><br>
+        <div id="div1"><input height="400px" width="400px" type="image" style="background-image:url(https://64.media.tumblr.com/347c7d3f88125a7817edd2b03968417f/805fd6ef20c758c0-1f/s400x600/07ce2d886f92e859214680118e590eced1520c82.png);"/></div><br><br>  
+        <div id="div2"><input height="400px" width="400px" type="image" style="background-image:url(https://pbs.twimg.com/profile_images/1189691118767747073/NcA9imuv_400x400.jpg);" /></div><br><br>
+        <div id="div3"><input height="400px" width="400px" type="image" style="background-image:url(https://cdn130.picsart.com/349435845070201.jpg);"/></div><br><br>
+</body>  
+</html>   
