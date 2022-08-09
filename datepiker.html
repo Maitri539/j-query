@@ -1,0 +1,33 @@
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Datepicker | Webdevtrick.com</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Squada+One&display=swap" rel="stylesheet">
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+      <script>
+        $(document).ready(function()
+			{
+				$("#date1").datepicker(
+				{
+					showWeek: true,
+					yearSuffix: "(DD/MM/YY)",
+					showAnim: "fadein",
+				});
+         $(function() {
+            $( "#date2" ).datepicker();
+            $( "#date2" ).datepicker("show");
+         });
+        });
+      </script>
+   </head>  
+   <body style="background-color: lightgrey;">
+	<label for="date1">ENETR YOUR DOB</label>
+	<input type="text" id="date1" placeholder="DOB" >
+	<br><br><hr>
+	<label for="date2">ENTER YOUR DOB</label>
+	<input type="text" id="date2" placeholder="DOB">
+</body>
+</html>
