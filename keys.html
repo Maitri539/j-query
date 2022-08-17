@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>f.b.kp.ku</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+    <script type="text/javascript">
+        $(document).ready(function(){
+                $("#x").focus(function(){
+                    $(this).css("background-color","lightgreen");
+                });
+                $("#y").blur(function(){
+                    $(this).css("background-color","lightblue");
+                });
+                $("#z").keypress(function(){
+                    alert($(this).val());
+                });
+                $("#w").keyup(function(){
+                    alert($(this).val());
+                });
+            });
+    </script>
+</head>
+<body style="background-color: tan;">
+    <center>
+     <input type="text" placeholder="focus"  id="x"/><hr>
+     <input type="text" placeholder="blur"  id="y"/><hr>
+     <input type="text" placeholder="key press"  id="z"/><hr>
+     <input type="text" placeholder="key up"  id="w"/><hr>    
+     <input type="text" placeholder="key down" onkeydown="()">
+</body>
+</html>
